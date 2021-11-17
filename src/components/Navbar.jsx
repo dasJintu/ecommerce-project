@@ -42,7 +42,7 @@ export default function Navbar() {
           {navigation.map((title) => (
             <Link
               to={`./${title}`}
-              className="font-bold text-gray-500 transition uppercase hover:border-b-4 border-gray-300 cursor-pointer"
+              className="font-bold text-sm text-gray-500 transition uppercase hover:border-b-4 border-gray-300 cursor-pointer"
               key={title}
             >
               {title}
