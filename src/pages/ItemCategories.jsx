@@ -1,9 +1,16 @@
-import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectProductsByCategory } from "../features/shop/productSlice";
 
 const ItemCategories = () => {
   let params = useParams();
+  const { pathname } = useLocation();
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const products = useSelector((state) =>
     selectProductsByCategory(state, params.categoryId)
@@ -14,7 +21,7 @@ const ItemCategories = () => {
       <h1 className="text-center uppercase font-bold text-gray-800 text-4xl pb-20">
         {params.categoryId}
       </h1>
-      <div className="grid grid-cols-3 gap-8 container font-roboto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 container font-roboto">
         {products.map((item) => (
           <div
             key={item.id}
