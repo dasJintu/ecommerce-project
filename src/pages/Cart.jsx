@@ -53,7 +53,7 @@ export default function Cart() {
         </div>
       ))}
 
-      {cartList.length && (
+      {cartList.length>0 && (
         <div className="max-w-2xl mx-auto">
           <div className="flex justify-between">
             <h1 className="text-xl font-extrabold text-gray-800 mt-10 mb-8">
