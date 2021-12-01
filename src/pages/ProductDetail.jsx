@@ -14,7 +14,7 @@ export default function ProductDetail() {
 
   return (
     <div>
-      <section className="py-16 grid grid-cols-2 gap-10 container font-roboto">
+      <section className="py-16 grid grid-cols-1 md:grid-cols-2 gap-10 container font-roboto">
         <div className="grid place-content-center">
           <img src={product.image} alt="" className="rounded-md h-72" />
         </div>
